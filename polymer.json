@@ -1,0 +1,57 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/my-app.html",
+  "fragments": [
+    "src/view-404.html",
+    "src/view-actions.html",
+    "src/view-alarms.html",
+    "src/view-black.html",
+    "src/view-devices.html",
+    "src/view-door-logs.html",
+    "src/view-history.html",
+    "src/view-home.html",
+    "src/view-hue-groups.html",
+    "src/view-hue-lights.html",
+    "src/view-hue-scenes.html",
+    "src/view-huesync.html",
+    "src/view-hvac.html",
+    "src/view-info.html",
+    "src/view-media.html",
+    "src/view-nanoleaf.html",
+    "src/view-presence-logs.html",
+    "src/view-remote.html",
+    "src/view-scheduled.html",
+    "src/view-settings.html",
+    "src/view-system-logs.html",
+    "src/view-vpn-logs.html",
+    "src/view-weather.html"
+  ],
+  "builds": [
+    {
+      "name": "bundled",
+      "addServiceWorker": true,
+      "swPrecacheConfig": "sw-precache-config.js",
+      "insertPrefetchLinks": false,
+      "bundle": true,
+      "js": {"minify": false, "compile": false},
+      "css": {"minify": true},
+      "html": {"minify": true}
+    }
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "scripts/**/*",
+    "bower.json",
+    "sw-notifications.js"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js",
+    "bower_components/app-storage/app-indexeddb-mirror/*",
+    "app.yaml"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  }
+}
